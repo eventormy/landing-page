@@ -2,11 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>eventor.my</title>
+  <title>eventor.my – Event venues & vendors in one place</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover, compare, and book event venues and vendors in Malaysia — all in one place." />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 720px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: #cbd5f5;
+    }
+
+    .cta {
+      margin-top: 32px;
+    }
+
+    input {
+      padding: 14px;
+      width: 260px;
+      max-width: 100%;
+      border-radius: 8px;
+      border: none;
+      margin-right: 8px;
+    }
+
+    button {
+      padding: 14px 20px;
+      border-radius: 8px;
+      border: none;
+      background: #6366f1;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #4f46e5;
+    }
+
+    footer {
+      margin-top: 48px;
+      font-size: 0.875rem;
+      color: #94a3b8;
+    }
+  </style>
 </head>
 <body>
-  <h1>eventor.my</h1>
-  <p>Malaysia’s event marketplace. Coming soon.</p>
+  <div class="container">
+    <h1>eventor.my</h1>
+    <p>
+      Find and book event venues and vendors in Malaysia — without endless WhatsApp messages.
+    </p>
+
+    <div class="cta">
+      <form>
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Join the waitlist</button>
+      </form>
+    </div>
+
+    <footer>
+      © 2025 eventor.my — Built in Malaysia 🇲🇾
+    </footer>
+  </div>
 </body>
 </html>
