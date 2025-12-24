@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>eventor.my – Event venues & vendors in one place</title>
+  <title>eventor.my – Malaysia’s Event Marketplace</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Discover, compare, and book event venues and vendors in Malaysia — all in one place." />
 
@@ -10,17 +10,17 @@
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0f172a;
+      background: linear-gradient(135deg, #0f172a, #020617);
       color: #e5e7eb;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
     }
 
     .container {
-      max-width: 720px;
-      padding: 40px;
+      max-width: 760px;
+      padding: 48px 24px;
       text-align: center;
     }
 
@@ -30,23 +30,42 @@
       color: #ffffff;
     }
 
-    p {
+    .subtitle {
       font-size: 1.25rem;
       line-height: 1.6;
-      color: #cbd5f5;
+      color: #c7d2fe;
+      margin-bottom: 40px;
     }
 
-    .cta {
+    .features {
+      text-align: left;
+      margin: 40px 0;
+    }
+
+    .features li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    .cta-box {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 12px;
+      padding: 32px;
       margin-top: 32px;
     }
 
-    input {
+    form {
+      margin-top: 16px;
+    }
+
+    input[type="email"] {
       padding: 14px;
       width: 260px;
       max-width: 100%;
       border-radius: 8px;
       border: none;
       margin-right: 8px;
+      margin-bottom: 12px;
     }
 
     button {
@@ -63,29 +82,67 @@
       background: #4f46e5;
     }
 
-    footer {
-      margin-top: 48px;
-      font-size: 0.875rem;
+    .secondary {
+      margin-top: 16px;
+      font-size: 0.95rem;
       color: #94a3b8;
+    }
+
+    .secondary a {
+      color: #a5b4fc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 56px;
+      font-size: 0.875rem;
+      color: #64748b;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>eventor.my</h1>
-    <p>
-      Find and book event venues and vendors in Malaysia — without endless WhatsApp messages.
+
+    <p class="subtitle">
+      Find and book event venues and vendors in Malaysia — without endless calls, emails, or WhatsApp follow-ups.
     </p>
 
-    <div class="cta">
-      <form>
-        <input type="email" placeholder="Enter your email" required />
+    <ul class="features">
+      <li>✅ Compare venues and vendors in one place</li>
+      <li>✅ Real availability, transparent pricing</li>
+      <li>✅ Secure deposits, no off-platform chasing</li>
+    </ul>
+
+    <!-- NETLIFY FORM START -->
+    <div class="cta-box">
+      <h2>Join the waitlist</h2>
+      <p>Be the first to access eventor.my when we launch.</p>
+
+      <form name="waitlist" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="waitlist" />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
         <button type="submit">Join the waitlist</button>
       </form>
+
+      <div class="secondary">
+        Are you a venue owner or vendor?
+        <br />
+        <a href="mailto:hello@eventor.my">List your space or service →</a>
+      </div>
     </div>
+    <!-- NETLIFY FORM END -->
 
     <footer>
-      © 2025 eventor.my — Built in Malaysia 🇲🇾
+      © 2025 eventor.my · Built in Malaysia 🇲🇾
     </footer>
   </div>
 </body>
