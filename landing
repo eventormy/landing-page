@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>eventor.my – Book Event Venues in Malaysia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+  <h1>Book Event Venues in Malaysia</h1>
+  <p>Discover, compare, and book venues securely with eventor.my</p>
+
+  <form name="waitlist" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="waitlist" />
+
+    <input type="text" name="name" placeholder="Your name" required />
+    <br />
+
+    <input type="email" name="email" placeholder="Your email" required />
+    <br />
+
+    <select name="role">
+      <option value="customer">I’m looking for a venue</option>
+      <option value="vendor">I’m a venue owner / vendor</option>
+    </select>
+    <br />
+
+    <button type="submit">Join the waitlist</button>
+  </form>
+
+</body>
+</html>
