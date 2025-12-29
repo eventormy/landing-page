@@ -6,126 +6,195 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Find and book event venues and vendors in Malaysia — all in one place." />
 
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #020617;
-      color: #e5e7eb;
+    :root {
+      --primary: #ECBDC4;
+      --text-dark: #1f2937;
+      --text-muted: #6b7280;
+      --bg-light: #fafafa;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--text-dark);
+      background: white;
+    }
+
+    /* NAVBAR */
+    header {
+      border-bottom: 1px solid #e5e7eb;
+      background: white;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    /* SECTIONS */
     section {
-      padding: 80px 24px;
+      padding: 56px 24px;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
     }
 
-    h1, h2 {
-      color: #fff;
-    }
-
     h1 {
-      font-size: 3rem;
-      margin-bottom: 16px;
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      letter-spacing: -0.03em;
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin-bottom: 24px;
+      letter-spacing: -0.02em;
     }
 
     p {
-      color: #cbd5f5;
+      font-size: 1.05rem;
       line-height: 1.6;
-      font-size: 1.1rem;
+      color: var(--text-muted);
     }
 
+    /* HERO */
     .hero {
-      text-align: center;
-      background: linear-gradient(135deg, #0f172a, #020617);
+      padding-top: 64px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 48px;
+      align-items: center;
     }
 
     .hero img {
-      margin-top: 40px;
       width: 100%;
       border-radius: 16px;
-      max-height: 420px;
       object-fit: cover;
     }
 
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 20px;
+      background: var(--primary);
+      color: var(--text-dark);
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* GRID */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
     }
 
     .card {
-      background: rgba(255,255,255,0.04);
+      background: var(--bg-light);
       padding: 24px;
       border-radius: 16px;
     }
 
-    .cta-box {
-      background: rgba(255,255,255,0.04);
-      padding: 32px;
-      border-radius: 16px;
+    /* FORM */
+    .cta {
+      background: var(--bg-light);
+      padding: 40px;
+      border-radius: 20px;
       text-align: center;
       max-width: 520px;
       margin: 0 auto;
     }
 
     input {
-      padding: 14px;
-      width: 260px;
-      max-width: 100%;
+      padding: 12px;
+      width: 100%;
+      max-width: 320px;
       border-radius: 8px;
-      border: none;
+      border: 1px solid #d1d5db;
       margin-bottom: 12px;
+      font-family: inherit;
     }
 
     button {
-      padding: 14px 20px;
-      border-radius: 8px;
+      padding: 12px 20px;
+      background: var(--primary);
       border: none;
-      background: #6366f1;
-      color: white;
+      border-radius: 8px;
       font-weight: 600;
       cursor: pointer;
     }
 
-    button:hover {
-      background: #4f46e5;
-    }
-
     footer {
       text-align: center;
-      padding: 40px;
-      color: #64748b;
+      padding: 32px;
       font-size: 0.9rem;
+      color: var(--text-muted);
+      border-top: 1px solid #e5e7eb;
     }
 
-    a {
-      color: #a5b4fc;
-      text-decoration: none;
-      font-weight: 600;
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<header>
+  <div class="nav">
+    <div class="logo">eventor.my</div>
+    <a href="mailto:hello@eventor.my">List your venue</a>
+  </div>
+</header>
+
 <!-- HERO -->
 <section class="hero">
-  <div class="container">
-    <h1>eventor.my</h1>
-    <p>
-      Discover, compare, and book event venues and vendors in Malaysia — without endless WhatsApp messages.
-    </p>
+  <div class="container hero-grid">
+    <div>
+      <h1>Book event venues and vendors, without the back-and-forth</h1>
+      <p>
+        eventor.my helps you discover, compare, and secure event venues and vendors in Malaysia — with real availability and secure deposits.
+      </p>
+      <a href="#waitlist" class="btn">Join the waitlist</a>
+    </div>
 
-    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1600&auto=format&fit=crop" alt="Event venue" />
+    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1400&auto=format&fit=crop" alt="Event venue">
   </div>
 </section>
 
@@ -136,85 +205,36 @@
 
     <div class="grid">
       <div class="card">
-        <h3>1. Discover</h3>
-        <p>Browse verified venues and vendors with real availability and transparent pricing.</p>
+        <strong>Discover</strong>
+        <p>Browse verified venues and vendors with transparent details.</p>
       </div>
 
       <div class="card">
-        <h3>2. Book securely</h3>
-        <p>Pay a deposit on-platform to secure your date — no off-platform chasing.</p>
+        <strong>Secure</strong>
+        <p>Lock in your date by paying a deposit on the platform.</p>
       </div>
 
       <div class="card">
-        <h3>3. Manage easily</h3>
-        <p>Vendors manage bookings, calendars, and analytics — all in one dashboard.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOR WHO -->
-<section>
-  <div class="container">
-    <h2>Built for both sides</h2>
-
-    <div class="grid">
-      <div class="card">
-        <h3>For customers</h3>
-        <p>Save weeks of venue hunting, comparisons, and follow-ups.</p>
-      </div>
-
-      <div class="card">
-        <h3>For venue owners & vendors</h3>
-        <p>Get quality leads, fewer no-shows, and full control over availability.</p>
+        <strong>Manage</strong>
+        <p>Vendors control availability, pricing, and bookings in one place.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- WAITLIST -->
-<section>
+<section id="waitlist">
   <div class="container">
-    <div class="cta-box">
+    <div class="cta">
       <h2>Join the waitlist</h2>
-      <p>Be the first to access eventor.my when we launch.</p>
+      <p>Get early access when eventor.my launches.</p>
 
       <form name="waitlist" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="waitlist" />
-        <input type="email" name="email" placeholder="Enter your email" required />
+        <input type="email" name="email" placeholder="Your email address" required />
         <br />
-        <button type="submit">Join the waitlist</button>
+        <button type="submit">Join waitlist</button>
       </form>
-
-      <p style="margin-top:16px;">
-        Are you a venue owner or vendor?  
-        <br />
-        <a href="mailto:hello@eventor.my">List your venue →</a>
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section>
-  <div class="container">
-    <h2>Frequently asked questions</h2>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Is eventor.my free?</h3>
-        <p>Yes. Browsing and joining the waitlist is completely free.</p>
-      </div>
-
-      <div class="card">
-        <h3>When will it launch?</h3>
-        <p>We’re onboarding early venues now. Waitlist users get first access.</p>
-      </div>
-
-      <div class="card">
-        <h3>Where is eventor.my available?</h3>
-        <p>We’re starting in Malaysia, with more cities coming soon.</p>
-      </div>
     </div>
   </div>
 </section>
