@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>eventor.my – Malaysia’s Event Marketplace</title>
+  <title>Eventor – Malaysia’s Event Marketplace</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Find and book event venues and vendors in Malaysia — all in one place." />
 
@@ -75,7 +75,7 @@
 
     h2 {
       font-size: 1.8rem;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       letter-spacing: -0.02em;
     }
 
@@ -128,14 +128,33 @@
       border-radius: 16px;
     }
 
+    /* IMAGE SECTION */
+    .image-section img {
+      width: 100%;
+      border-radius: 20px;
+      max-height: 480px;
+      object-fit: cover;
+    }
+
     /* FORM */
     .cta {
       background: var(--bg-light);
       padding: 40px;
       border-radius: 20px;
       text-align: center;
-      max-width: 520px;
+      max-width: 560px;
       margin: 0 auto;
+    }
+
+    .benefits {
+      text-align: left;
+      margin: 20px auto 24px;
+      max-width: 360px;
+    }
+
+    .benefits li {
+      margin-bottom: 8px;
+      color: var(--text-muted);
     }
 
     input {
@@ -178,8 +197,8 @@
 <!-- NAV -->
 <header>
   <div class="nav">
-    <div class="logo">eventor.my</div>
-    <a href="mailto:hello@eventor.my">List your venue</a>
+    <div class="logo">Eventor</div>
+    <a href="mailto:admin@eventor.my">List your venue</a>
   </div>
 </header>
 
@@ -189,7 +208,7 @@
     <div>
       <h1>Book event venues and vendors, without the back-and-forth</h1>
       <p>
-        eventor.my helps you discover, compare, and secure event venues and vendors in Malaysia — with real availability and secure deposits.
+        Eventor helps you discover, compare, and secure event venues and vendors in Malaysia — with real availability and secure deposits.
       </p>
       <a href="#waitlist" class="btn">Join the waitlist</a>
     </div>
@@ -222,12 +241,28 @@
   </div>
 </section>
 
+<!-- IMAGE BREAK -->
+<section class="image-section">
+  <div class="container">
+    <img
+      src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1600&auto=format&fit=crop"
+      alt="Malaysian wedding ceremony at a venue"
+    />
+  </div>
+</section>
+
 <!-- WAITLIST -->
 <section id="waitlist">
   <div class="container">
     <div class="cta">
       <h2>Join the waitlist</h2>
-      <p>Get early access when eventor.my launches.</p>
+      <p>Get early access when Eventor launches.</p>
+
+      <ul class="benefits">
+        <li>🎟️ Exclusive launch discounts</li>
+        <li>⭐ Early supporter profile badge</li>
+        <li>💰 Rebates on vendor bookings</li>
+      </ul>
 
       <form name="waitlist" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="waitlist" />
@@ -240,7 +275,7 @@
 </section>
 
 <footer>
-  © 2025 eventor.my · Built in Malaysia 🇲🇾
+  © 2025 Eventor · Built in Malaysia 🇲🇾
 </footer>
 
 </body>
