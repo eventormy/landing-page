@@ -8,27 +8,6 @@
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Analytics (Google Analytics placeholder) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
-  </script>
-
-  <!-- Heatmap (Hotjar placeholder) -->
-  <script>
-    (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:XXXXXXX,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
-
   <style>
     :root {
       --primary: #ecbdc4;
@@ -46,24 +25,24 @@
       font-family: 'Inter', sans-serif;
       color: var(--text-main);
       background: #ffffff;
-      line-height: 1.6;
+      line-height: 1.55;
     }
 
     header {
-      padding: 18px 32px;
+      padding: 16px 28px;
       border-bottom: 1px solid #eee;
-      animation: fadeDown 0.6s ease forwards;
+      animation: fadeDown 0.5s ease forwards;
     }
 
     header a {
       text-decoration: none;
       font-weight: 600;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--text-main);
     }
 
     section {
-      padding: 80px 20px;
+      padding: 55px 20px; /* tightened */
       max-width: 1100px;
       margin: auto;
     }
@@ -71,106 +50,130 @@
     /* Hero */
     .hero {
       text-align: center;
-      animation: fadeUp 0.8s ease forwards;
+      padding-top: 45px;
+      padding-bottom: 40px;
+      animation: fadeUp 0.6s ease forwards;
     }
 
     .hero h1 {
-      font-size: clamp(2rem, 5vw, 2.7rem);
-      margin-bottom: 12px;
+      font-size: clamp(1.9rem, 4.5vw, 2.4rem);
+      margin-bottom: 10px;
       letter-spacing: -0.4px;
     }
 
     .hero p {
-      max-width: 720px;
+      max-width: 680px;
       margin: auto;
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: var(--text-muted);
     }
 
     /* Features */
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 28px;
-      margin-top: 60px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+      margin-top: 35px;
     }
 
     .feature-card {
       background: var(--card-bg);
-      padding: 32px;
-      border-radius: 18px;
-      transition: transform 0.25s ease;
+      padding: 26px;
+      border-radius: 16px;
+      transition: transform 0.2s ease;
     }
 
     .feature-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-3px);
     }
 
     .feature-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.05rem;
+      margin-bottom: 8px;
+      font-size: 1rem;
     }
 
     .feature-card p {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--text-muted);
     }
 
-    /* Dashboard Preview */
+    /* Dashboard Image */
     .dashboard-preview {
-      margin-top: 90px;
+      padding-top: 40px;
+      padding-bottom: 40px;
       text-align: center;
     }
 
-    .dashboard-box {
-      margin-top: 35px;
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 25px;
+    .dashboard-preview h2 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
     }
 
-    .dashboard-tile {
-      background: #f3f3f3;
-      padding: 28px;
-      border-radius: 14px;
-      font-size: 0.9rem;
-      color: #444;
+    .dashboard-preview p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+    }
+
+    .dashboard-image {
+      max-width: 900px;
+      margin: auto;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+    }
+
+    .dashboard-image img {
+      width: 100%;
+      display: block;
     }
 
     /* Highlight */
     .highlight {
       background: var(--primary);
-      border-radius: 24px;
-      padding: 55px 30px;
+      border-radius: 22px;
+      padding: 45px 28px;
       text-align: center;
-      margin-top: 90px;
+      margin-top: 45px;
     }
 
     .highlight strong {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+    }
+
+    .highlight p {
+      font-size: 0.95rem;
+      margin-top: 6px;
     }
 
     /* Form */
     .form-section {
-      margin-top: 90px;
+      padding-top: 45px;
+      padding-bottom: 60px;
       text-align: center;
     }
 
+    .form-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+
+    .form-section p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
     form {
-      max-width: 420px;
-      margin: 30px auto 0;
+      max-width: 400px;
+      margin: 24px auto 0;
     }
 
     input, select, button {
       width: 100%;
-      padding: 13px;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      margin-bottom: 12px;
+      padding: 12px;
+      border-radius: 9px;
+      font-size: 0.92rem;
+      margin-bottom: 10px;
     }
 
     input, select {
@@ -182,35 +185,39 @@
       color: #fff;
       border: none;
       cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
     button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 14px rgba(0,0,0,0.18);
     }
 
     footer {
-      padding: 40px 20px;
+      padding: 30px 20px;
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: #777;
     }
 
     /* Animations */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(25px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-20px); }
+      from { opacity: 0; transform: translateY(-16px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
       section {
-        padding: 60px 18px;
+        padding: 45px 18px;
+      }
+
+      .highlight {
+        padding: 38px 22px;
       }
     }
   </style>
@@ -226,7 +233,7 @@
   <h1>Turn availability into confirmed bookings</h1>
   <p>
     Eventor helps venue owners and event vendors get discovered, manage bookings,
-    and grow revenue. And oh, without upfront fees of course.
+    and grow revenue. Without upfront fees.
   </p>
 </section>
 
@@ -256,13 +263,14 @@
 
 <section class="dashboard-preview">
   <h2>Your partner dashboard</h2>
-  <p>Everything you need in one place.</p>
+  <p>Everything you need, in one place.</p>
 
-  <div class="dashboard-box">
-    <div class="dashboard-tile">📅 Booking Calendar</div>
-    <div class="dashboard-tile">📊 Booking Analytics</div>
-    <div class="dashboard-tile">✅ Approval Management</div>
-    <div class="dashboard-tile">💬 Client Requests</div>
+  <div class="dashboard-image">
+    <!-- Replace with real dashboard screenshot later -->
+    <img
+      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+      alt="Eventor partner dashboard preview"
+    />
   </div>
 </section>
 
