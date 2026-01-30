@@ -2,280 +2,224 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Eventor – Malaysia’s Event Marketplace</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Find and book event venues and vendors in Malaysia — all in one place." />
+  <title>Eventor</title>
 
-  <!-- Inter Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --primary: #ECBDC4;
-      --text-dark: #1f2937;
-      --text-muted: #6b7280;
-      --bg-light: #fafafa;
+      --secondary: #ffffff;
+      --text: #2b2b2b;
+      --muted: #6b6b6b;
     }
 
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
 
     body {
-      margin: 0;
-      font-family: 'Inter', system-ui, sans-serif;
-      color: var(--text-dark);
-      background: white;
+      background: var(--secondary);
+      color: var(--text);
+      line-height: 1.6;
     }
 
-    /* NAVBAR */
     header {
-      border-bottom: 1px solid #e5e7eb;
-      background: white;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 20px 40px;
     }
 
     .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 16px 24px;
+      max-width: 1200px;
+      margin: auto;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
-      font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: -0.02em;
-    }
-
-    .nav a {
-      text-decoration: none;
-      color: var(--text-dark);
-      font-weight: 500;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 56px 24px;
+      font-weight: 600;
+      font-size: 20px;
     }
 
     .container {
       max-width: 1100px;
-      margin: 0 auto;
+      margin: auto;
+      padding: 60px 40px;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 42px;
       margin-bottom: 12px;
-      letter-spacing: -0.03em;
     }
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      letter-spacing: -0.02em;
+      font-size: 28px;
+      margin-bottom: 12px;
     }
 
     p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: var(--text-muted);
+      color: var(--muted);
     }
 
-    /* HERO */
     .hero {
-      padding-top: 64px;
+      text-align: center;
+      padding-bottom: 40px;
     }
 
-    .hero-grid {
+    .hero-images {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 48px;
-      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
     }
 
-    .hero img {
+    .hero-images img {
       width: 100%;
-      border-radius: 16px;
+      border-radius: 14px;
       object-fit: cover;
+      height: 300px;
     }
 
-    /* BUTTON */
-    .btn {
-      display: inline-block;
-      margin-top: 24px;
-      padding: 12px 20px;
-      background: var(--primary);
-      color: var(--text-dark);
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
+    .section {
+      padding: 60px 0;
+      text-align: center;
     }
 
-    /* GRID */
-    .grid {
+    .how-it-works {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
     }
 
     .card {
-      background: var(--bg-light);
-      padding: 24px;
+      background: #fff;
+      padding: 30px;
       border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
     }
 
-    /* IMAGE SECTION */
-    .image-section img {
-      width: 100%;
+    .waitlist {
+      background: var(--primary);
       border-radius: 20px;
-      max-height: 480px;
-      object-fit: cover;
+      padding: 50px;
+      margin-top: 40px;
     }
 
-    /* FORM */
-    .cta {
-      background: var(--bg-light);
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-      max-width: 560px;
-      margin: 0 auto;
+    form {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    .benefits {
-      text-align: left;
-      margin: 20px auto 24px;
-      max-width: 360px;
-    }
-
-    .benefits li {
-      margin-bottom: 8px;
-      color: var(--text-muted);
-    }
-
-    input {
-      padding: 12px;
-      width: 100%;
-      max-width: 320px;
+    input[type="email"] {
+      padding: 14px;
       border-radius: 8px;
-      border: 1px solid #d1d5db;
-      margin-bottom: 12px;
-      font-family: inherit;
+      border: none;
+      width: 260px;
     }
 
     button {
-      padding: 12px 20px;
-      background: var(--primary);
-      border: none;
+      padding: 14px 22px;
       border-radius: 8px;
-      font-weight: 600;
+      border: none;
+      background: #000;
+      color: #fff;
       cursor: pointer;
     }
 
-    footer {
-      text-align: center;
-      padding: 32px;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      border-top: 1px solid #e5e7eb;
+    .partner-link {
+      margin-top: 20px;
+      display: inline-block;
+      font-weight: 500;
+      text-decoration: underline;
+      color: #000;
     }
 
-    @media (max-width: 900px) {
-      .hero-grid {
+    footer {
+      padding: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 768px) {
+      .hero-images {
+        grid-template-columns: 1fr;
+      }
+
+      .how-it-works {
         grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
-
 <body>
 
-<!-- NAV -->
 <header>
   <div class="nav">
     <div class="logo">Eventor</div>
-    <a href="mailto:admin@eventor.my">List your venue</a>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <h1>Book event venues and vendors, without the back-and-forth</h1>
-      <p>
-        Eventor helps you discover, compare, and secure event venues and vendors in Malaysia — with real availability and secure deposits.
-      </p>
-      <a href="#waitlist" class="btn">Join the waitlist</a>
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Find the perfect venue for every event</h1>
+    <p>Weddings, corporate functions, private events — all in one place.</p>
+
+    <div class="hero-images">
+      <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf" alt="Malaysian Wedding Venue">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Corporate Event">
     </div>
+  </section>
 
-    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1400&auto=format&fit=crop" alt="Event venue">
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section>
-  <div class="container">
+  <!-- HOW IT WORKS -->
+  <section class="section">
     <h2>How it works</h2>
-
-    <div class="grid">
-      <div class="card">
-        <strong>Discover</strong>
-        <p>Browse verified venues and vendors with transparent details.</p>
-      </div>
-
-      <div class="card">
-        <strong>Secure</strong>
-        <p>Lock in your date by paying a deposit on the platform.</p>
-      </div>
-
-      <div class="card">
-        <strong>Manage</strong>
-        <p>Vendors control availability, pricing, and bookings in one place.</p>
-      </div>
+    <div class="how-it-works">
+      <div class="card">Browse curated venues across Malaysia</div>
+      <div class="card">Compare availability & pricing</div>
+      <div class="card">Book with confidence</div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- IMAGE BREAK -->
-<section class="image-section">
-  <div class="container">
-    <img
-      src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1600&auto=format&fit=crop"
-      alt="Malaysian wedding ceremony at a venue"
-    />
-  </div>
-</section>
+  <!-- WAITLIST -->
+  <section class="section">
+    <div class="waitlist">
+      <h2>Get early access</h2>
+      <p>Be the first to experience Eventor.</p>
 
-<!-- WAITLIST -->
-<section id="waitlist">
-  <div class="container">
-    <div class="cta">
-      <h2>Join the waitlist</h2>
-      <p>Get early access when Eventor launches.</p>
-
-      <ul class="benefits">
-        <li>🎟️ Exclusive launch discounts</li>
-        <li>⭐ Early supporter profile badge</li>
-        <li>💰 Rebates on vendor bookings</li>
+      <ul style="margin-top:20px; text-align:left; display:inline-block;">
+        <li>Exclusive discounts</li>
+        <li>Exclusive profile badge</li>
+        <li>Rebates on vendor bookings</li>
       </ul>
 
       <form name="waitlist" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="waitlist" />
-        <input type="email" name="email" placeholder="Your email address" required />
-        <br />
+        <input type="email" name="email" placeholder="Your email" required />
         <button type="submit">Join waitlist</button>
       </form>
+
+      <a class="partner-link" href="partners.html">List your venue or service</a>
     </div>
-  </div>
-</section>
+  </section>
+
+</main>
 
 <footer>
-  © 2025 Eventor · Built in Malaysia 🇲🇾
+  © 2026 Eventor. All rights reserved.
 </footer>
 
 </body>
