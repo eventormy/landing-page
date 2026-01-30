@@ -3,108 +3,215 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eventor Partners</title>
+  <title>Eventor Partners – Grow Your Bookings</title>
 
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Analytics (Google Analytics placeholder) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  <!-- Heatmap (Hotjar placeholder) -->
+  <script>
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:XXXXXXX,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
   <style>
+    :root {
+      --primary: #ecbdc4;
+      --text-main: #2f2f2f;
+      --text-muted: #6b6b6b;
+      --card-bg: #f9f7f6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
       background: #ffffff;
-      color: #333;
+      line-height: 1.6;
     }
 
     header {
-      padding: 20px 40px;
+      padding: 18px 32px;
       border-bottom: 1px solid #eee;
+      animation: fadeDown 0.6s ease forwards;
     }
 
     header a {
       text-decoration: none;
       font-weight: 600;
-      color: #333;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
+      color: var(--text-main);
     }
 
     section {
-      padding: 70px 20px;
+      padding: 80px 20px;
       max-width: 1100px;
       margin: auto;
     }
 
+    /* Hero */
     .hero {
       text-align: center;
+      animation: fadeUp 0.8s ease forwards;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: clamp(2rem, 5vw, 2.7rem);
       margin-bottom: 12px;
+      letter-spacing: -0.4px;
     }
 
     .hero p {
-      color: #555;
+      max-width: 720px;
+      margin: auto;
       font-size: 1.05rem;
+      color: var(--text-muted);
     }
 
+    /* Features */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 30px;
-      margin-top: 50px;
+      gap: 28px;
+      margin-top: 60px;
     }
 
     .feature-card {
-      background: #f9f7f6;
-      padding: 30px;
-      border-radius: 16px;
+      background: var(--card-bg);
+      padding: 32px;
+      border-radius: 18px;
+      transition: transform 0.25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
     }
 
     .feature-card h3 {
       margin-bottom: 10px;
+      font-size: 1.05rem;
     }
 
-    .highlight {
-      background: #ecbdc4;
-      color: #333;
-      border-radius: 16px;
-      padding: 40px;
+    .feature-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* Dashboard Preview */
+    .dashboard-preview {
+      margin-top: 90px;
       text-align: center;
-      margin-top: 60px;
+    }
+
+    .dashboard-box {
+      margin-top: 35px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+    }
+
+    .dashboard-tile {
+      background: #f3f3f3;
+      padding: 28px;
+      border-radius: 14px;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    /* Highlight */
+    .highlight {
+      background: var(--primary);
+      border-radius: 24px;
+      padding: 55px 30px;
+      text-align: center;
+      margin-top: 90px;
     }
 
     .highlight strong {
       font-size: 1.2rem;
     }
 
+    /* Form */
     .form-section {
-      margin-top: 70px;
+      margin-top: 90px;
       text-align: center;
     }
 
     form {
-      max-width: 400px;
+      max-width: 420px;
       margin: 30px auto 0;
     }
 
     input, select, button {
       width: 100%;
-      padding: 12px;
-      margin-bottom: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+      padding: 13px;
+      border-radius: 10px;
       font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    input, select {
+      border: 1px solid #ccc;
     }
 
     button {
-      background: #333;
-      color: white;
+      background: #2f2f2f;
+      color: #fff;
       border: none;
       cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     button:hover {
-      opacity: 0.9;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 60px 18px;
+      }
     }
   </style>
 </head>
@@ -116,37 +223,52 @@
 </header>
 
 <section class="hero">
-  <h1>Grow your bookings with Eventor</h1>
-  <p>A platform built for venue owners and event vendors.</p>
+  <h1>Turn availability into confirmed bookings</h1>
+  <p>
+    Eventor helps venue owners and event vendors get discovered, manage bookings,
+    and grow revenue. And oh, without upfront fees of course.
+  </p>
 </section>
 
 <section>
   <div class="features">
     <div class="feature-card">
-      <h3>Full control</h3>
-      <p>Manage your listings, availability, and pricing anytime.</p>
+      <h3>Full listing control</h3>
+      <p>Update availability, details, and pricing anytime.</p>
     </div>
 
     <div class="feature-card">
-      <h3>Smart booking system</h3>
-      <p>View bookings in calendar view and approve requests with ease.</p>
+      <h3>Smart booking approvals</h3>
+      <p>Accept or decline requests with full visibility.</p>
     </div>
 
     <div class="feature-card">
-      <h3>Actionable insights</h3>
-      <p>Track performance, demand, and booking trends.</p>
+      <h3>Calendar view</h3>
+      <p>See all upcoming bookings at a glance.</p>
     </div>
 
     <div class="feature-card">
-      <h3>One dashboard</h3>
-      <p>All bookings, communications, and analytics in one place.</p>
+      <h3>Performance analytics</h3>
+      <p>Understand demand, trends, and revenue insights.</p>
     </div>
   </div>
+</section>
 
-  <div class="highlight">
-    <strong>Eventor only gets paid when you get a booking.</strong>
-    <p>No listing fees. No subscriptions. No risk.</p>
+<section class="dashboard-preview">
+  <h2>Your partner dashboard</h2>
+  <p>Everything you need in one place.</p>
+
+  <div class="dashboard-box">
+    <div class="dashboard-tile">📅 Booking Calendar</div>
+    <div class="dashboard-tile">📊 Booking Analytics</div>
+    <div class="dashboard-tile">✅ Approval Management</div>
+    <div class="dashboard-tile">💬 Client Requests</div>
   </div>
+</section>
+
+<section class="highlight">
+  <strong>Eventor only gets paid when you get a booking.</strong>
+  <p>No listing fees. No subscriptions. No risk.</p>
 </section>
 
 <section class="form-section">
@@ -167,6 +289,10 @@
     <button type="submit">Join as a partner</button>
   </form>
 </section>
+
+<footer>
+  © 2026 Eventor.my
+</footer>
 
 </body>
 </html>
