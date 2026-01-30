@@ -3,223 +3,224 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eventor</title>
+  <title>Eventor – Discover & Book Event Venues</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --primary: #ECBDC4;
-      --secondary: #ffffff;
-      --text: #2b2b2b;
-      --muted: #6b6b6b;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
     body {
-      background: var(--secondary);
-      color: var(--text);
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      background: #ffffff;
     }
 
+    /* Header */
     header {
-      background: #fff;
-      border-bottom: 1px solid #eee;
       padding: 20px 40px;
+      border-bottom: 1px solid #eee;
     }
 
-    .nav {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
+    header a {
+      text-decoration: none;
       font-weight: 600;
-      font-size: 20px;
+      font-size: 1.2rem;
+      color: #333;
     }
 
-    .container {
+    section {
+      padding: 70px 20px;
       max-width: 1100px;
       margin: auto;
-      padding: 60px 40px;
     }
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 12px;
-    }
-
-    h2 {
-      font-size: 28px;
-      margin-bottom: 12px;
-    }
-
-    p {
-      color: var(--muted);
-    }
-
+    /* Hero */
     .hero {
       text-align: center;
-      padding-bottom: 40px;
     }
 
-    .hero-images {
+    .hero h1 {
+      font-size: 2.6rem;
+      margin-bottom: 14px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #555;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* Image Row */
+    .image-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      margin-top: 40px;
+      margin-top: 50px;
     }
 
-    .hero-images img {
+    .image-row img {
       width: 100%;
-      border-radius: 14px;
+      height: 260px;
       object-fit: cover;
-      height: 300px;
+      border-radius: 16px;
     }
 
-    .section {
-      padding: 60px 0;
+    /* How it works */
+    .how-it-works {
       text-align: center;
     }
 
-    .how-it-works {
+    .how-box {
+      margin-top: 40px;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 45px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 30px;
-      margin-top: 40px;
     }
 
-    .card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    .how-step h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
     }
 
+    .how-step p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Waitlist */
     .waitlist {
-      background: var(--primary);
+      background: #ecbdc4;
       border-radius: 20px;
-      padding: 50px;
-      margin-top: 40px;
+      padding: 50px 30px;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .waitlist h2 {
+      margin-bottom: 12px;
+    }
+
+    .waitlist p {
+      margin-bottom: 25px;
+      font-size: 0.95rem;
     }
 
     form {
-      margin-top: 20px;
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
+      max-width: 420px;
+      margin: auto;
     }
 
-    input[type="email"] {
-      padding: 14px;
+    input, button {
+      width: 100%;
+      padding: 12px;
       border-radius: 8px;
       border: none;
-      width: 260px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    input {
+      border: 1px solid #ccc;
     }
 
     button {
-      padding: 14px 22px;
-      border-radius: 8px;
-      border: none;
-      background: #000;
+      background: #333;
       color: #fff;
       cursor: pointer;
     }
 
-    .partner-link {
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .secondary-cta {
       margin-top: 20px;
-      display: inline-block;
+      font-size: 0.9rem;
+    }
+
+    .secondary-cta a {
+      color: #333;
       font-weight: 500;
       text-decoration: underline;
-      color: #000;
     }
 
     footer {
-      padding: 40px;
+      padding: 40px 20px;
       text-align: center;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    @media (max-width: 768px) {
-      .hero-images {
-        grid-template-columns: 1fr;
-      }
-
-      .how-it-works {
-        grid-template-columns: 1fr;
-      }
+      font-size: 0.85rem;
+      color: #777;
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <div class="nav">
-    <div class="logo">Eventor</div>
-  </div>
+  <a href="/">Eventor</a>
 </header>
 
-<main class="container">
+<section class="hero">
+  <h1>Discover and book event venues — faster</h1>
+  <p>
+    Eventor helps you find the right venue or vendor for weddings, corporate
+    events, and celebrations — all in one place.
+  </p>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Find the perfect venue for every event</h1>
-    <p>Weddings, corporate functions, private events — all in one place.</p>
+  <div class="image-row">
+    <!-- Replace image URLs later if needed -->
+    <img src="https://images.unsplash.com/photo-1529636798458-92182e662485" alt="Malaysian wedding venue">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Corporate event function">
+  </div>
+</section>
 
-    <div class="hero-images">
-      <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf" alt="Malaysian Wedding Venue">
-      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Corporate Event">
+<section class="how-it-works">
+  <h2>How it works</h2>
+
+  <div class="how-box">
+    <div class="how-step">
+      <h3>1. Discover</h3>
+      <p>Browse curated venues and trusted event vendors across Malaysia.</p>
     </div>
-  </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="section">
-    <h2>How it works</h2>
-    <div class="how-it-works">
-      <div class="card">Browse curated venues across Malaysia</div>
-      <div class="card">Compare availability & pricing</div>
-      <div class="card">Book with confidence</div>
+    <div class="how-step">
+      <h3>2. Book</h3>
+      <p>Request availability and secure your booking with a deposit.</p>
     </div>
-  </section>
 
-  <!-- WAITLIST -->
-  <section class="section">
-    <div class="waitlist">
-      <h2>Get early access</h2>
-      <p>Be the first to experience Eventor.</p>
-
-      <ul style="margin-top:20px; text-align:left; display:inline-block;">
-        <li>Exclusive discounts</li>
-        <li>Exclusive profile badge</li>
-        <li>Rebates on vendor bookings</li>
-      </ul>
-
-      <form name="waitlist" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="waitlist" />
-        <input type="email" name="email" placeholder="Your email" required />
-        <button type="submit">Join waitlist</button>
-      </form>
-
-      <a class="partner-link" href="partners.html">List your venue or service</a>
+    <div class="how-step">
+      <h3>3. Manage</h3>
+      <p>Track confirmations, details, and updates in one place.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-</main>
+<section class="waitlist">
+  <h2>Get early access to Eventor</h2>
+  <p>
+    Early users enjoy exclusive discounts, special profile badges,
+    and rebates on vendor bookings.
+  </p>
+
+  <form name="waitlist" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="waitlist" />
+    <input type="email" name="email" placeholder="Your email address" required />
+    <button type="submit">Join the waitlist</button>
+  </form>
+
+  <div class="secondary-cta">
+    Are you a venue owner or vendor?
+    <a href="/partners.html">List your venue</a>
+  </div>
+</section>
 
 <footer>
-  © 2026 Eventor. All rights reserved.
+  © 2026 Eventor.my
 </footer>
 
 </body>
